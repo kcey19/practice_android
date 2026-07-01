@@ -21,7 +21,7 @@ public class Main {
             System.out.println("4. Exit Application");
             System.out.print("Please select an option (1-4): ");
 
-            int choice = 0;
+            int choice ;
             try{
                 System.out.println("Choose an option :");
                 choice = scanner.nextInt();
