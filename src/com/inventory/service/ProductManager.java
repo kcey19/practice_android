@@ -31,4 +31,16 @@ public class ProductManager {
         }
         System.out.println(" \n");
     }
+
+    public boolean deleteProduct(int id) {
+        for (int i = 0; i < stockList.size(); i++) {
+            if (stockList.get(i).getId() == id) {
+                stockList.remove(i);
+                System.out.println(" 🚮 Product with ID " + id + " has been successfully deleted.");
+                return true;
+            }
+        }
+        System.out.println(" ❌ Error: Product with ID " + id + " not found.");
+        return false;
+    }
 }

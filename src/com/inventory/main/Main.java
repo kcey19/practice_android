@@ -2,6 +2,8 @@ package com.inventory.main;
 
 import com.inventory.model.Product;
 import com.inventory.service.ProductManager;
+
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -15,11 +17,21 @@ public class Main {
         while (isRunning) {
             System.out.println("1. View Current Inventory");
             System.out.println("2. Add New Product");
-            System.out.println("3. Exit Application");
-            System.out.print("Please select an option (1-3): ");
+            System.out.println("3. Delete Product");
+            System.out.println("4. Exit Application");
+            System.out.print("Please select an option (1-4): ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = 0;
+            try{
+                System.out.println("Choose an option :");
+                choice = scanner.nextInt();
+                scanner.nextLine();
+            }
+            catch(InputMismatchException e){
+                System.out.println(" ❌Invalid Input. Please enter a valid number.");
+                scanner.nextLine();
+                continue;
+            }
 
             switch (choice) {
                 case 1:
@@ -42,12 +54,19 @@ public class Main {
                     break;
 
                 case 3:
+                    System.out.print("Enter Product ID to delete: ");
+                    int idToDelete = scanner.nextInt();
+                    manager.deleteProduct(idToDelete);
+                    break;
+
+                case 4:
                     isRunning = false;
                     System.out.println("🔌 Shutting down system. Goodbye!");
                     break;
 
+
                 default:
-                    System.out.println("❌ Invalid choice! Please select a number between 1 and 3.");
+                    System.out.println("❌ Invalid choice! Please select a number between 1 and 4");
             }
         }
 
