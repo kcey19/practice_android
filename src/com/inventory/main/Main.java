@@ -6,14 +6,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Initialize our service manager and the scanner for console input
         ProductManager manager = new ProductManager();
         Scanner scanner = new Scanner(System.in);
         boolean isRunning = true;
 
         System.out.println("=== Welcome to the Professional Inventory System ===");
 
-        // The core interactive menu loop
         while (isRunning) {
             System.out.println("1. View Current Inventory");
             System.out.println("2. Add New Product");
@@ -21,7 +19,7 @@ public class Main {
             System.out.print("Please select an option (1-3): ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); // Consume the leftover newline character in the buffer
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -31,16 +29,14 @@ public class Main {
                 case 2:
                     System.out.print("Enter Product ID (Integer): ");
                     int id = scanner.nextInt();
-                    scanner.nextLine(); // Clear buffer
-
+                    scanner.nextLine();
                     System.out.print("Enter Product Name: ");
                     String name = scanner.nextLine();
 
                     System.out.print("Enter Initial Stock Quantity: ");
                     int quantity = scanner.nextInt();
-                    scanner.nextLine(); // Clear buffer
+                    scanner.nextLine();
 
-                    // Instantiate a new Product object and pass it to the service layer
                     Product newProduct = new Product(id, name, quantity);
                     manager.addProduct(newProduct);
                     break;
