@@ -123,8 +123,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         viewModel.loading.observe(viewLifecycleOwner) { isLoading ->
 
-            // We'll connect ProgressBar later
-
         }
 
         viewModel.error.observe(viewLifecycleOwner) { message ->
