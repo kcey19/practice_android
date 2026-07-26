@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Esewazone</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="good_morning">Good Morning</string>
+
+    <string name="search_hint">What are you searching for?</string>
+
+    <string name="delivery_to">Delivery to</string>
+
+    <string name="set_address">SET ADDRESS</string>
+
+    <string name="featured_products">Featured Products</string>
+
+    <string name="categories">Categories</string>
+
+    <string name="hot_deals">Hot Deals of The Day</string>
+
+    <string name="popular_brand">Popular Brand</string>
+
+    <string name="recommended">Recommended For You</string>
+</resources>

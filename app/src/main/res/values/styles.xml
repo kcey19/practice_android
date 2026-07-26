@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Active" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/primaryGreen</item>
+        <item name="marginHorizontal">@dimen/spacing_md</item>
+    </style>
+    
+    <style name="bottomText">
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/poppins_bold</item>
+    </style>
+    
+</resources>

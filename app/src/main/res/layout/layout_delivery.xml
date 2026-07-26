@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/cardDelivery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="18dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@android:color/white"
+        app:strokeWidth="0dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/locationIconContainer"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:cardCornerRadius="24dp"
+                app:strokeWidth="0dp"
+                app:cardBackgroundColor="@color/lightGreen"
+                app:cardElevation="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/location_24"
+                    app:tint="@color/primaryGreen"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/txtDeliverTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Deliver to"
+                android:textColor="@color/textPrimary"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@id/locationIconContainer"
+                app:layout_constraintTop_toTopOf="@id/locationIconContainer"/>
+
+
+            <TextView
+                android:id="@+id/txtAddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:fontFamily="@font/poppins"
+                android:text="Add address to place order"
+                android:textColor="@color/textSecondary"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/txtDeliverTo"
+                app:layout_constraintTop_toBottomOf="@id/txtDeliverTo"
+                app:layout_constraintEnd_toStartOf="@id/btnSetAddress"/>
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSetAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:text="SET ADDRESS"
+                android:textAllCaps="true"
+                android:textSize="11sp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingHorizontal="16dp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="@color/primaryGreen"
+                app:cornerRadius="12dp"
+                app:layout_constraintBottom_toBottomOf="@id/locationIconContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/locationIconContainer"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
