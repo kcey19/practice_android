@@ -9,7 +9,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 object RetrofitInstance {
 
     private const val BASE_URL = "https://fakestoreapi.com/"
-
     private val logging = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
@@ -27,5 +26,4 @@ object RetrofitInstance {
             .create(ApiService::class.java)
 
     }
-
 }

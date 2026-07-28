@@ -116,7 +116,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun observeProducts() {
 
         viewModel.products.observe(viewLifecycleOwner) {
-
             productAdapter.submitList(it)
 
         }
@@ -126,7 +125,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
 
         viewModel.error.observe(viewLifecycleOwner) { message ->
-
             Snackbar.make(
                 binding.root,
                 message,
@@ -134,7 +132,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             ).show()
 
         }
-
     }
 
 

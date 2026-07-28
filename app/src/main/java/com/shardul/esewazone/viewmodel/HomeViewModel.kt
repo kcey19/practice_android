@@ -18,7 +18,6 @@ class HomeViewModel : ViewModel() {
     val loading: LiveData<Boolean> = _loading
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
-
     init {
         fetchProducts()
     }

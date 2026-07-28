@@ -11,13 +11,10 @@ import kotlinx.coroutines.launch
 class ProductDetailsViewModel(
     private val repository: ProductRepository
 ) : ViewModel() {
-
     private val _product = MutableLiveData<Product>()
     val product: LiveData<Product> = _product
-
     private val _loading = MutableLiveData<Boolean>()
     val loading: LiveData<Boolean> = _loading
-
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
 

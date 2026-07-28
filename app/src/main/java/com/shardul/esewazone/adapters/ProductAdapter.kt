@@ -38,9 +38,7 @@ class ProductAdapter(
     fun submitList(newProducts: List<Product>) {
 
         products.clear()
-
         products.addAll(newProducts)
-
         notifyDataSetChanged()
 
     }

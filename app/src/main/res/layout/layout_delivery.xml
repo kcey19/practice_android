@@ -14,13 +14,17 @@
         android:foreground="?attr/selectableItemBackground"
         app:cardBackgroundColor="@android:color/white"
         app:strokeWidth="0dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="3dp">
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp">
+
+
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="18dp">
+            android:padding="18dp"
+            android:paddingBottom="0dp"
+            >
 
 
             <com.google.android.material.card.MaterialCardView
@@ -91,7 +95,8 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+
+</com.google.android.material.card.MaterialCardView>
 
 
 

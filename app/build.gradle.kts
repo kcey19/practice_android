@@ -3,7 +3,6 @@ plugins {
 }
 
 android {
-
     buildFeatures{
         viewBinding = true
     }

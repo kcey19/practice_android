@@ -108,21 +108,13 @@
                 android:id="@+id/txtTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:layout_marginTop="10dp"
-
                 android:fontFamily="@font/poppins_semibold"
-
                 android:text="Apple MacBook Pro M3 Max 16-inch"
-
                 android:textColor="@color/textPrimary"
-
                 android:textSize="24sp"
-
                 android:maxLines="3"
-
                 android:ellipsize="end"
-
                 tools:text="Apple MacBook Pro M3 Max 16-inch"/>
 
 

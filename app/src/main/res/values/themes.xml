@@ -1,6 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Base.Theme.Esewazone" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/offwhite</item>
     </style>
 
     <style name="Theme.Esewazone" parent="Base.Theme.Esewazone" />

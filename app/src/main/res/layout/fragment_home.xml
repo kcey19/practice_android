@@ -107,6 +107,7 @@
             android:id="@+id/rvProducts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_marginTop="14dp"
             android:clipToPadding="false"
             android:nestedScrollingEnabled="false"
