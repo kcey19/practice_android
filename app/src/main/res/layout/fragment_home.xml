@@ -117,7 +117,20 @@
             android:overScrollMode="never"
             />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="Crashlytics setup"
+            app:backgroundTint="@color/light_blue"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
     </LinearLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>

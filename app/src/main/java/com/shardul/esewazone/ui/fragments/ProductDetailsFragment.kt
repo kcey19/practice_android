@@ -68,7 +68,7 @@ class ProductDetailsFragment : Fragment() {
 
             binding.txtCategory.text = product.category
 
-            binding.txtPrice.text =
+            binding.txtBottomPrice.text =
                 "NPR %.2f".format(product.price)
 
             binding.txtBottomPrice.text =
@@ -80,7 +80,7 @@ class ProductDetailsFragment : Fragment() {
             binding.txtRating.text =
                 "${product.rating.rate} (${product.rating.count})"
 
-            binding.toolbar.setNavigationOnClickListener {
+            binding.btnBack.setOnClickListener {
                 findNavController().navigateUp()
             }
 

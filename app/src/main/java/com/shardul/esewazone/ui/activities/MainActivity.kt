@@ -1,7 +1,11 @@
 package com.shardul.esewazone.ui.activities
 
+import com.shardul.esewazone.R
+import android.view.View
 import android.os.Bundle
+import android.view.ViewGroup
 import android.view.animation.DecelerateInterpolator
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -39,6 +43,25 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         binding.bottomNavigation.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            when (destination.id) {
+
+                R.id.homeFragment,
+                R.id.cartFragment,
+                R.id.favouritesFragment,
+                R.id.profileFragment -> {
+                    binding.bottomNavigation.visibility =
+                        View.VISIBLE
+                }
+                else -> {
+                    binding.bottomNavigation.visibility =
+                        View.GONE
+                }
+            }
+        }
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

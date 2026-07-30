@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shardul.esewazone.R
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.shardul.esewazone.adapters.ProductAdapter
 import com.shardul.esewazone.viewmodel.HomeViewModel
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
 
@@ -36,6 +38,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val btnTestCrash = view.findViewById<Button>(R.id.btnTest)
+
+        btnTestCrash.setOnClickListener {
+            val crashlytics = FirebaseCrashlytics.getInstance()
+            crashlytics.setCustomKey("environment", "development")
+            crashlytics.log("Test crash triggered from HomeFragment")
+
+            throw RuntimeException("Crashlytics Verification Test Crash from HomeFragment")
+        }
+
         _binding = FragmentHomeBinding.bind(view)
         setupBanner()
         setupCategoryRecyclerView()
