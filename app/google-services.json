@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "361989797887",
+    "project_id": "esewazone-aa793",
+    "storage_bucket": "esewazone-aa793.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361989797887:android:8894be7057b73f9d6fd9ca",
+        "android_client_info": {
+          "package_name": "com.shardul.esewazone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwwpG84jv5vDh0Kf3__LdHgRxoq3ZrFeQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
