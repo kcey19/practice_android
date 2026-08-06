@@ -12,7 +12,20 @@
           "package_name": "com.shardul.esewazone"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "361989797887-a80secbc15b7c2cr0efr1me7c6r7jvbo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.shardul.esewazone",
+            "certificate_hash": "d3a9b2a65f04f23cbb4eb090ea06cf1c7478c25c"
+          }
+        },
+        {
+          "client_id": "361989797887-i7tn99cpdod50b16i5ukt5h28iett27m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyAwwpG84jv5vDh0Kf3__LdHgRxoq3ZrFeQ"
@@ -20,7 +33,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361989797887-i7tn99cpdod50b16i5ukt5h28iett27m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

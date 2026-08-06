@@ -19,25 +19,15 @@ class ProductDetailsViewModel(
     val error: LiveData<String> = _error
 
     fun fetchProduct(id: Int) {
-
         viewModelScope.launch {
-
             _loading.value = true
-
             try {
-
                 val result = repository.getProductById(id)
-
                 _product.value = result
-
             } catch (e: Exception) {
-
                 _error.value = e.message
-
             } finally {
-
                 _loading.value = false
-
             }
         }
     }

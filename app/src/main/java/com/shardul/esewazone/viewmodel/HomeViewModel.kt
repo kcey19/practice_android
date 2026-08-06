@@ -10,7 +10,6 @@ import com.shardul.esewazone.data.repository.ProductRepository
 import kotlinx.coroutines.launch
 
 class HomeViewModel : ViewModel() {
-
     private val repository = ProductRepository(RetrofitInstance.api)
     private val _products = MutableLiveData<List<Product>>()
     val products: LiveData<List<Product>> = _products
@@ -29,7 +28,6 @@ class HomeViewModel : ViewModel() {
                 _products.value = response
 
             } catch (e: Exception) {
-
                 _error.value = e.message
 
             } finally {
