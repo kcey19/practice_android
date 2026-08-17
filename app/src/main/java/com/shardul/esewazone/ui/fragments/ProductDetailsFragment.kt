@@ -11,14 +11,19 @@ import androidx.navigation.fragment.findNavController
 import coil.load
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.shardul.esewazone.R
 import com.shardul.esewazone.api.RetrofitInstance
 import com.shardul.esewazone.databinding.FragmentProductDetailsBinding
 import com.shardul.esewazone.data.repository.ProductRepository
 import com.shardul.esewazone.database.CartDatabase
 import com.shardul.esewazone.repository.CartRepository
+import com.shardul.esewazone.repository.FavouriteRepository
 import com.shardul.esewazone.viewmodel.CartViewModel
 import com.shardul.esewazone.viewmodel.CartViewModelFactory
+import com.shardul.esewazone.viewmodel.FavouriteViewModel
+import com.shardul.esewazone.viewmodel.FavouriteViewModelFactory
 import com.shardul.esewazone.viewmodel.ProductDetailsViewModel
 import com.shardul.esewazone.viewmodel.ProductDetailsViewModelFactory
 
@@ -29,6 +34,7 @@ class ProductDetailsFragment : Fragment() {
     private val binding get() = _binding!!
     private lateinit var viewModel: ProductDetailsViewModel
     private lateinit var cartViewModel: CartViewModel
+    private lateinit var favouriteViewModel: FavouriteViewModel
     private var quantity = 1
     private var addToCartSnackbar: Snackbar? = null
     private var snackbar: Snackbar? = null
@@ -62,11 +68,16 @@ class ProductDetailsFragment : Fragment() {
         val cartDao =
             CartDatabase.getDatabase(requireContext()).cartDao()
         val cartRepository =
-            CartRepository(cartDao)
+            CartRepository(cartDao, FirebaseAuth.getInstance())
+        val favouriteRepository=
+            FavouriteRepository(FirebaseAuth.getInstance(),FirebaseFirestore.getInstance())
         val cartFactory =
             CartViewModelFactory(cartRepository)
+        val favouriteFactory =
+            FavouriteViewModelFactory(favouriteRepository)
 
         cartViewModel = ViewModelProvider(this,cartFactory)[CartViewModel::class.java]
+        favouriteViewModel = ViewModelProvider(this,favouriteFactory)[FavouriteViewModel::class.java]
 
         viewModel.fetchProduct(productId)
         observeProduct()
@@ -97,6 +108,7 @@ class ProductDetailsFragment : Fragment() {
             }
 
             binding.btnFavourite.setOnClickListener {
+                favouriteViewModel.addToFavourites(product)
                    Snackbar.make(
                     binding.root,
                     "Added to Favourites",

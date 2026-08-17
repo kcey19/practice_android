@@ -1,5 +1,6 @@
 package com.shardul.esewazone.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -12,52 +13,79 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.firebase.FirebaseApp
+import com.google.firebase.auth.FirebaseAuth
 import com.shardul.esewazone.R
 import com.shardul.esewazone.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
+
         val splashScreen = installSplashScreen()
-        splashScreen.setOnExitAnimationListener { splashScreen ->
-            splashScreen.view.animate()
+        super.onCreate(savedInstanceState)
+        if (!isUserLoggedIn()) {
+            navigateToLogin()
+            return
+        }
+        splashScreen.setOnExitAnimationListener { splash ->
+            splash.view
+                .animate()
                 .scaleX(2.1f)
                 .scaleY(2.1f)
                 .alpha(0.8f)
                 .setDuration(800)
                 .setInterpolator(DecelerateInterpolator())
                 .withEndAction {
-                    splashScreen.remove()
+                    splash.remove()
                 }
                 .start()
-
         }
-        val firebase = FirebaseApp.initializeApp(this)
-        if (firebase
-            != null
-        ) {
-            Log.v("Firevase initialize", "Firevase initialized")
-        } else {
-            Log.v("Firevase notinitialize", "Firevase not initialized")
+        setupMainUI()
+    }
 
-        }
-        super.onCreate(savedInstanceState)
+    private fun isUserLoggedIn(): Boolean {
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        Log.d("AUTH_SESSION", "Current user: ${currentUser?.email ?: "No user logged in"}")
+        return currentUser != null
+    }
+
+    private fun navigateToLogin() {
+
+        val intent = Intent(this, LoginActivity::class.java)
+        intent.flags =
+            Intent.FLAG_ACTIVITY_NEW_TASK or
+                    Intent.FLAG_ACTIVITY_CLEAR_TASK
+
+        startActivity(intent)
+        finish()
+    }
+
+    private fun setupMainUI() {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         val navHostFragment =
-            supportFragmentManager.findFragmentById(binding.navHostFragment.id) as NavHostFragment
-        val navController = navHostFragment.navController
+            supportFragmentManager.findFragmentById(
+                binding.navHostFragment.id
+            ) as NavHostFragment
 
-        binding.bottomNavigation.setupWithNavController(navController)
-        navController.addOnDestinationChangedListener { _, destination, _ ->
+        val navController = navHostFragment.navController
+        binding.bottomNavigation.setupWithNavController(
+            navController
+        )
+
+        navController.addOnDestinationChangedListener {
+                _, destination, _ ->
+
             when (destination.id) {
                 R.id.homeFragment,
                 R.id.cartFragment,
                 R.id.favouritesFragment,
-                R.id.profileFragment -> {
+                R.id.moreFragment -> {
                     binding.bottomNavigation.visibility =
                         View.VISIBLE
                 }
@@ -69,16 +97,24 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+        ViewCompat.setOnApplyWindowInsetsListener(
+            binding.main
+        ) { v, insets ->
 
+            val systemBars =
+                insets.getInsets(
+                    WindowInsetsCompat.Type.systemBars()
+                )
 
+            v.setPadding(
+                systemBars.left,
+                systemBars.top,
+                systemBars.right,
+                systemBars.bottom
+            )
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
     }
-
-
 }
 

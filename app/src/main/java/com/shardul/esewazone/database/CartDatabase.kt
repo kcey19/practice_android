@@ -7,7 +7,8 @@ import androidx.room.RoomDatabase
 
 @Database(
     entities = [CartEntity::class],
-    version = 1,
+    version = 2,
+    exportSchema = true
 )
 abstract class CartDatabase : RoomDatabase() {
     abstract fun cartDao(): CartDao
@@ -17,10 +18,11 @@ abstract class CartDatabase : RoomDatabase() {
         fun getDatabase(context: Context): CartDatabase {
             return INSTANCE ?: synchronized(this) {
                 val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    CartDatabase::class.java,
-                    "cart_database"
-                ).build()
+                                context.applicationContext,
+                                CartDatabase::class.java,
+                                "cart_database"
+                            ).addMigrations(Migration_1_2)
+                    .build()
                 INSTANCE = instance
                 instance
             }

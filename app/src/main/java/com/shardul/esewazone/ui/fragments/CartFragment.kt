@@ -17,6 +17,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.Firebase
+import com.google.firebase.auth.FirebaseAuth
 import com.shardul.esewazone.R
 import com.shardul.esewazone.adapters.CartAdapter
 import com.shardul.esewazone.database.CartDatabase
@@ -32,9 +34,7 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
 
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
-
     private lateinit var viewModel: CartViewModel
-
     private lateinit var cartAdapter: CartAdapter
 
     override fun onCreateView(
@@ -57,7 +57,6 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
         savedInstanceState: Bundle?
     ) {
         val navController = findNavController()
-
         binding.btnBack.setOnClickListener {
             navController.navigateUp()
         }
@@ -72,7 +71,7 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
 
             val bottomSheet = DeleteFromBottomSheet()
             bottomSheet.setOnDeleteListener {
-                viewModel.clearCart()
+                viewModel.clearUserCart()
                 Snackbar.make(
                     binding.root,
                     "Cart cleared successfully",
@@ -90,7 +89,7 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
             CartDatabase.getDatabase(requireContext())
 
         val repository =
-            CartRepository(database.cartDao())
+            CartRepository(database.cartDao(), FirebaseAuth.getInstance())
 
         val factory =
             CartViewModelFactory(repository)

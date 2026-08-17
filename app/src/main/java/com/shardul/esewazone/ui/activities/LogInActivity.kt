@@ -15,9 +15,20 @@ import com.shardul.esewazone.databinding.ActivityLoginBinding
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
     private lateinit var auth: FirebaseAuth
+    private var isCheckingAuth = true
     override fun onCreate(savedInstanceState: Bundle?) {
-        installSplashScreen()
+        val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
+        splashScreen.setKeepOnScreenCondition { isCheckingAuth }
+        val currentUser = FirebaseAuth.getInstance().currentUser
+        if(currentUser!=null){
+            startActivity(Intent(this,MainActivity::class.java))
+            isCheckingAuth=false
+            finish()
+            return
+        }
+
+        isCheckingAuth=false
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -44,6 +55,7 @@ class LoginActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
                     Toast.makeText(this, "Welcome back!", Toast.LENGTH_SHORT).show()
                     navigateToMain()
+                    finish()
                 } else {
                     Toast.makeText(
                         this,

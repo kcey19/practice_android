@@ -91,7 +91,6 @@ class SignUpActivity : AppCompatActivity() {
                             setLoadingState(false)
 
                             if (profileTask.isSuccessful) {
-                                auth.signOut()
                                 Toast.makeText(this,"Account created successfully! Please log in",Toast.LENGTH_LONG).show()
 //                                Utils.showToast(this, "Account created successfully! Please log in.")
                                 finish()

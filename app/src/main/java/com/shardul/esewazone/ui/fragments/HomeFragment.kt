@@ -38,16 +38,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val btnTestCrash = view.findViewById<Button>(R.id.btnTest)
-
-        btnTestCrash.setOnClickListener {
-            val crashlytics = FirebaseCrashlytics.getInstance()
-            crashlytics.setCustomKey("environment", "development")
-            crashlytics.log("Test crash triggered from HomeFragment")
-
-            throw RuntimeException("Crashlytics Verification Test Crash from HomeFragment")
-        }
-
         _binding = FragmentHomeBinding.bind(view)
         setupBanner()
         setupCategoryRecyclerView()
@@ -90,14 +80,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     private fun setupProductRecyclerView(){
         productAdapter = ProductAdapter(
             onProductClick = { product ->
-
                 val bundle = Bundle()
                 bundle.putInt("productId", product.id)
                 findNavController().navigate(
                     R.id.action_homeFragment_to_productDetailsFragment,
                     bundle
                 )
-
             },
             onCartClick = {
                 Snackbar.make(

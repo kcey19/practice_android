@@ -1,4 +1,4 @@
-package com.shardul.esewazone.ui.more
+package com.shardul.esewazone.ui.fragments
 
 import android.content.Intent
 import android.os.Bundle
@@ -14,7 +14,7 @@ import com.shardul.esewazone.viewmodel.ProfileViewModel
 import com.shardul.esewazone.viewmodel.ProfileViewModelFactory
 import com.shardul.esewazone.ui.activities.LoginActivity
 
-class ProfileFragment : Fragment() {
+class MoreFragment : Fragment() {
     private var _binding: FragmentMoreBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: ProfileViewModel
@@ -41,6 +41,7 @@ class ProfileFragment : Fragment() {
 
         setupViewModel()
         setupLogout()
+
     }
 
     private fun setupViewModel() {
@@ -58,9 +59,7 @@ class ProfileFragment : Fragment() {
     private fun setupLogout() {
 
         binding.cardLogout.setOnClickListener {
-
             viewModel.logout()
-
             navigateToLogin()
 
         }

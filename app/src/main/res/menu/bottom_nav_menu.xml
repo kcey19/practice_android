@@ -17,7 +17,7 @@
         android:title="Cart"/>
 
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/moreFragment"
         android:icon="@drawable/menu_24"
         android:title="More"/>
 </menu>

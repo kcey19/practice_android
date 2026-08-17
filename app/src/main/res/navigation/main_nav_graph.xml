@@ -40,7 +40,7 @@
         android:name="com.shardul.esewazone.ui.fragments.FavouritesFragment"
         android:label="Favourites" />
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.shardul.esewazone.ui.fragments.ProfileFragment"
+        android:id="@+id/moreFragment"
+        android:name="com.shardul.esewazone.ui.fragments.MoreFragment"
         android:label="Profile" />
 </navigation>
