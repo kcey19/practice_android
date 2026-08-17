@@ -3,11 +3,13 @@ plugins {
     id("com.google.gms.google-services")
     id("com.google.firebase.crashlytics")
     alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.compose)
 }
 
 android {
     buildFeatures{
         viewBinding = true
+        compose = true
     }
 
     namespace = "com.shardul.esewazone"
@@ -70,7 +72,17 @@ dependencies {
     implementation("com.google.firebase:firebase-crashlytics")
     implementation("com.google.firebase:firebase-analytics")
     implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
     implementation("com.google.android.gms:play-services-auth:21.2.0")
+
+    implementation(platform("androidx.compose:compose-bom:2024.09.00"))
+    implementation("androidx.compose.ui:ui")
+    implementation("androidx.compose.ui:ui-tooling-preview")
+    implementation("androidx.compose.material3:material3")
+    implementation("io.coil-kt:coil-compose:2.7.0")
+    implementation("androidx.activity:activity-compose")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose")
+    debugImplementation("androidx.compose.ui:ui-tooling")
     implementation(libs.firebase.firestore)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
