@@ -6,7 +6,7 @@
 - ✅ Firebase Crashlytics
 - ✅ Room Database
 - ✅ Cart Persistence
-- ⏳ User-specific Cart Sync
-- ⏳ Favorites
-- ⏳ Profile Management
-- ⏳ Checkout Flow
+- ✅ User-specific Cart Sync
+- ✅ Favorites
+- ✅ Profile Management
+- ✅ Checkout Flow
