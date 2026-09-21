@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="Active" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
-        <item name="android:color">@color/primaryGreen</item>
-        <item name="marginHorizontal">@dimen/spacing_md</item>
+
+        <item name="android:color">#C8F59D</item>
+
+        <item name="marginHorizontal">8dp</item>
+
     </style>
     
     <style name="bottomText">
         <item name="android:textSize">14sp</item>
-        <item name="android:fontFamily">@font/poppins_bold</item>
+        <item name="android:fontFamily">@font/source_sans_pro</item>
+    </style>
+
+    <style name="Widget.App.PopularChip" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">#F3F4F6</item>
+        <item name="chipCornerRadius">12dp</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="android:textColor">#4B5563</item>
+        <item name="android:textSize">12sp</item>
+        <item name="chipMinTouchTargetSize">36dp</item>
     </style>
     
 </resources>

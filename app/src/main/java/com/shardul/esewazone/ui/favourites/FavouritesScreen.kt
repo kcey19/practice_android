@@ -1,5 +1,7 @@
 package com.shardul.esewazone.ui.favourites
 
+import androidx.compose.foundation.Image
+import com.shardul.esewazone.R
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -19,14 +21,15 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.Check
-import androidx.compose.material.icons.filled.ShoppingCart
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Checkbox
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -40,7 +43,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -145,14 +150,82 @@ fun FavouritesScreen(
                     )
                 }
                 favourites.isEmpty() -> {
-                    Text(
-                        text = "No favourites yet",
+                    Column(
                         modifier = Modifier
-                            .align(
-                                Alignment.Center
-                            ),
-                        fontSize = 16.sp
-                    )
+                            .fillMaxWidth()
+                            .padding(16.dp)
+                    ) {
+
+                        Card(
+                            modifier = Modifier.fillMaxWidth(),
+                            shape = RoundedCornerShape(24.dp),
+                            colors = CardDefaults.cardColors(containerColor = Color.White),
+                            elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)
+                        ) {
+                            Column(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 36.dp, horizontal = 24.dp),
+                                horizontalAlignment = Alignment.CenterHorizontally,
+                                verticalArrangement = Arrangement.Center
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(130.dp)
+                                        .background(
+                                            color = Color(0xFFF5F7FA),
+                                            shape = CircleShape
+                                        ),
+                                    contentAlignment = Alignment.Center
+                                ) {
+
+                                    Image(
+                                        painter = painterResource(id = R.drawable.empty_favourite),
+                                        contentDescription = "No favourites",
+                                        modifier = Modifier.size(80.dp)
+                                    )
+                                }
+
+                                Spacer(modifier = Modifier.height(24.dp))
+
+                                Text(
+                                    text = "No favorites yet",
+                                    fontSize = 20.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    color = Color(0xFF1E2538)
+                                )
+
+                                Spacer(modifier = Modifier.height(8.dp))
+
+                                Text(
+                                    text = "Add your favorites to wishlist and\nthey will show here.",
+                                    fontSize = 14.sp,
+                                    color = Color(0xFF8C96A6),
+                                    textAlign = TextAlign.Center,
+                                    lineHeight = 20.sp
+                                )
+
+                                Spacer(modifier = Modifier.height(24.dp))
+
+                                Button(
+                                    onClick = {},
+                                    colors = ButtonDefaults.buttonColors(
+                                        containerColor = Color(0xFFF2ABB00)
+                                    ),
+                                    shape = RoundedCornerShape(12.dp),
+                                    contentPadding = ButtonDefaults.ContentPadding
+                                ) {
+                                    Text(
+                                        text = "CONTINUE SHOPPING",
+                                        fontSize = 13.sp,
+                                        fontWeight = FontWeight.Bold,
+                                        color = Color.White,
+                                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 4.dp)
+                                    )
+                                }
+                            }
+                        }
+                    }
                 }
                 else -> {
                     LazyColumn(

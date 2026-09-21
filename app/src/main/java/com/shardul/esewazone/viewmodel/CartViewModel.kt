@@ -20,43 +20,30 @@ class CartViewModel(
             started = SharingStarted.WhileSubscribed(5000),
             initialValue = emptyList()
         )
-    
     public fun addToCart(product:Product){
         viewModelScope.launch {
             repository.addToCart(product)
         }
     }
-
      fun increaseQuantity(item: CartEntity){
         viewModelScope.launch {
             repository.increaseQuantity(item)
         }
     }
-
      fun decreaseQuantity(item: CartEntity){
         viewModelScope.launch {
             repository.decreaseQuantity(item)
         }
     }
-
      fun removeItem(item: CartEntity){
         viewModelScope.launch {
             repository.removeItem(item)
         }
     }
-
      fun clearUserCart(){
         viewModelScope.launch{
             repository.clearUserCart()
         }
     }
 
-
 }
-/*
-class cartViewModel(
-private val repository: CartRepository
-): ViewModel(){
-
-}
- */

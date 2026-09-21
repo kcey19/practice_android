@@ -87,6 +87,7 @@ class CartRepository(
                     price = product.price
                 )
             )
+
         } else{
             cartdao.updateItem(
                 existingItem.copy(

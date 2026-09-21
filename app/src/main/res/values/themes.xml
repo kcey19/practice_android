@@ -1,13 +1,24 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Base.Theme.Esewazone" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.Esewazone"
+        parent="Theme.Material3.DayNight.NoActionBar">
+
         <item name="android:colorBackground">@color/offwhite</item>
+
     </style>
 
-    <style name="Theme.Esewazone" parent="Base.Theme.Esewazone" />
-    <style name="SplashTheme" parent="Theme.SplashScreen">
-        <item name="windowSplashScreenBackground">#60BB46</item>
-        <item name="windowSplashScreenAnimatedIcon">@drawable/unnamed</item>
-        <item name="postSplashScreenTheme">@style/Theme.Esewazone</item>
+    <style name="Theme.Esewazone"
+        parent="Base.Theme.Esewazone" />
+
+    <style name="SplashTheme"
+        parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">#2A970B</item>
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/esewa_splash_logo_transparent
+        </item>
+        <item name="postSplashScreenTheme">
+            @style/Theme.Esewazone
+        </item>
     </style>
+
 </resources>

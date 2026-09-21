@@ -12,13 +12,11 @@ import kotlinx.coroutines.launch
 class FavouriteViewModel(
     private val repository: FavouriteRepository
 ) : ViewModel() {
-
     private val _favourites =
         MutableStateFlow<List<FavouriteItem>>(emptyList())
 
     val favourites: StateFlow<List<FavouriteItem>> =
         _favourites
-
     private val _isLoading =
         MutableStateFlow(false)
     val isLoading: StateFlow<Boolean> =
@@ -66,4 +64,42 @@ class FavouriteViewModel(
             _isLoading.value = false
         }
     }
+
+    fun deleteSelectedFavourites(
+        productIds: Set<Int>
+    ) {
+        viewModelScope.launch {
+            _error.value = null
+            val result =
+                repository.removeSelectedFavourites(productIds)
+
+            result
+                .onSuccess {
+                    _favourites.value =
+                        _favourites.value.filter {
+                            it.productId !in productIds
+                        }
+                }
+                .onFailure { exception ->
+                    _error.value =
+                        exception.message
+                }
+        }
+    }
+
+    fun deleteAllFavourites(){
+        viewModelScope.launch {
+            _error.value = null
+            val result = repository.removeAllFavourites()
+            result.onSuccess {
+                _favourites.value=
+                   emptyList()
+            }
+                .onFailure {exception ->
+                    _error.value=exception.message
+                }
+        }
+
+    }
+
 }

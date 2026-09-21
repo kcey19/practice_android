@@ -1,38 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background"
     android:fillViewport="true"
+    android:isScrollContainer="true"
     android:scrollbars="none">
 
     <LinearLayout
         android:id="@+id/homeContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FAF9F6"
         android:orientation="vertical"
         android:paddingBottom="24dp">
 
         <include
             android:id="@+id/headerLayout"
-            layout="@layout/layout_header"/>
+            layout="@layout/layout_header" />
 
         <include
             android:id="@+id/searchLayout"
-            layout="@layout/layout_search"/>
+            layout="@layout/layout_search" />
 
         <include
             android:id="@+id/deliveryLayout"
-            layout="@layout/layout_delivery"/>
+            layout="@layout/layout_delivery" />
 
         <include
             android:id="@+id/bannerLayout"
-            layout="@layout/layout_banner"/>
+            layout="@layout/layout_banner" />
 
+        <!-- CATEGORIES SECTION -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -52,14 +55,14 @@
                     android:text="Categories"
                     android:textColor="#222222"
                     android:textSize="18sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <ImageButton
                     android:id="@+id/btnCategoryArrow"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:background="@android:color/transparent"
-                    android:contentDescription="TODO"
+                    android:contentDescription="View all categories"
                     android:src="@drawable/arrow_right_24"
                     tools:ignore="TouchTargetSizeCheck" />
             </LinearLayout>
@@ -70,10 +73,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="12dp"
                 android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
-                android:paddingHorizontal="16dp"/>
+                android:paddingHorizontal="16dp" />
         </LinearLayout>
 
+        <!-- FEATURED PRODUCTS SECTION -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -90,7 +95,7 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Featured Products"
                 android:textColor="@color/textPrimary"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/txtFeaturedSeeAll"
@@ -99,7 +104,7 @@
                 android:fontFamily="@font/poppins_medium"
                 android:text="See All"
                 android:textColor="@color/primaryGreen"
-                android:textSize="13sp"/>
+                android:textSize="13sp" />
 
         </LinearLayout>
 
@@ -107,17 +112,195 @@
             android:id="@+id/rvProducts"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="14dp"
             android:clipToPadding="false"
             android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:overScrollMode="never"
             android:paddingHorizontal="12dp"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:overScrollMode="never"
-            />
+            android:paddingEnd="16dp" />
+
+        <!-- 1. HOT DEALS OF THE DAY -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/txtHotDealsTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Hot Deals of TheDay"
+                android:textColor="#1E2022"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnHotDealsMore"
+                android:layout_width="36dp"
+                android:layout_height="24dp"
+                android:background="@drawable/bg_arrow_button"
+                android:contentDescription="See All Hot Deals"
+                android:src="@drawable/arrow_right_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#2B3445" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHotDeals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product" />
+
+        <!-- 2. PROMOTIONAL BANNER -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/bannerPromo"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#B2F252"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="0dp">
+
+            <ImageView
+                android:id="@+id/imgPromoBanner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/metric"
+                tools:ignore="ContentDescription" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="16dp"
+            android:fontFamily="@font/source_sans_pro"
+            android:text="Most Popular"
+            android:textColor="#1E2022"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroupPopular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:paddingHorizontal="16dp"
+            app:chipSpacingHorizontal="8dp"
+            app:chipSpacingVertical="4dp"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipBabycare"
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Babycare"
+                app:chipIcon="@drawable/hot_deals"
+                app:chipIconTint="#FF5722"
+                app:chipIconVisible="true" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home and Living" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Men's Fashions" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Women's Fashions" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trending Electronics" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sports &amp; Travels" />
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.App.PopularChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Daily Needs" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <!-- 4. POPULAR BRAND -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/txtPopularBrandTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/source_sans_pro"
+                android:text="Popular Brand"
+                android:textColor="#1E2022"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/btnPopularBrandMore"
+                android:layout_width="36dp"
+                android:layout_height="24dp"
+                android:background="@drawable/bg_arrow_button"
+                android:contentDescription="See All Popular Brands"
+                android:src="@drawable/arrow_right_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="#2B3445" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPopularBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="24dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="false"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_product" />
     </LinearLayout>
-
-
 
 </androidx.core.widget.NestedScrollView>

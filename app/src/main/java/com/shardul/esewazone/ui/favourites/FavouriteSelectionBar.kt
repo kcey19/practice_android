@@ -39,6 +39,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
@@ -102,3 +103,10 @@ fun FavouriteSelectionBar(
     }
 }
 
+@Preview(showBackground = true)
+@Composable
+fun myPreview(){
+    FavouriteSelectionBar(
+        2,true,true,{},{}, Modifier
+    )
+}

@@ -37,6 +37,7 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
     private lateinit var viewModel: CartViewModel
     private lateinit var cartAdapter: CartAdapter
 
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -61,6 +62,21 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
             navController.navigateUp()
         }
 
+        binding.btnCheckout.setOnClickListener {
+            if(viewModel.cartItems.value.isEmpty()){
+                Snackbar.make(
+                    binding.root,
+                    "Cart is empty",
+                    Snackbar.LENGTH_SHORT
+                ).show()
+                return@setOnClickListener
+            } else{
+                findNavController().navigate(
+                    R.id.action_cartFragment_to_checkoutFragment
+                )
+            }
+
+        }
 
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
@@ -68,7 +84,7 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
         observeCart()
 
         binding.btnDelete.setOnClickListener {
-
+            if (viewModel.cartItems.value.isNotEmpty()){
             val bottomSheet = DeleteFromBottomSheet()
             bottomSheet.setOnDeleteListener {
                 viewModel.clearUserCart()
@@ -78,8 +94,8 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
                     Snackbar.LENGTH_SHORT
                 ).show()
             }
-
             bottomSheet.show(parentFragmentManager, "DeleteCart")
+        }
         }
     }
 
@@ -87,23 +103,18 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
 
         val database =
             CartDatabase.getDatabase(requireContext())
-
         val repository =
             CartRepository(database.cartDao(), FirebaseAuth.getInstance())
-
         val factory =
             CartViewModelFactory(repository)
-
         viewModel =
             ViewModelProvider(
                 this,
                 factory
             )[CartViewModel::class.java]
-
     }
 
     private fun setupRecyclerView() {
-
         cartAdapter =
             CartAdapter(
                 emptyList(),
@@ -120,25 +131,16 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
     }
 
     private fun observeCart() {
-
         viewLifecycleOwner.lifecycleScope.launch {
-
             viewLifecycleOwner.repeatOnLifecycle(
                 Lifecycle.State.STARTED
             ) {
-
                 viewModel.cartItems.collect { cartItems ->
-
                     cartAdapter.updateCart(cartItems)
-
                     updateTotal(cartItems)
-
                 }
-
             }
-
         }
-
     }
 
     private fun updateTotal(
@@ -146,13 +148,10 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
     ) {
         binding.txtItemsCount.text =
             "Items (${cartItems.size})"
-
-
         val total =
             cartItems.sumOf {
                 it.price * it.quantity
             }
-
         binding.txtTotalPrice.text =
             "Rs. %.2f".format(total)
 

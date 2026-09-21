@@ -26,22 +26,22 @@ class MainActivity : AppCompatActivity() {
 
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
-        if (!isUserLoggedIn()) {
-            navigateToLogin()
-            return
-        }
+
         splashScreen.setOnExitAnimationListener { splash ->
             splash.view
                 .animate()
-                .scaleX(2.1f)
-                .scaleY(2.1f)
-                .alpha(0.8f)
-                .setDuration(800)
-                .setInterpolator(DecelerateInterpolator())
+                .scaleX(1.2f)
+                .scaleY(1.2f)
+                .alpha(0f)
+                .setDuration(300)
                 .withEndAction {
                     splash.remove()
                 }
                 .start()
+        }
+        if (!isUserLoggedIn()) {
+            navigateToLogin()
+            return
         }
         setupMainUI()
     }

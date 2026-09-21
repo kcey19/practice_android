@@ -12,7 +12,6 @@ class FavouriteRepository(
     private val auth: FirebaseAuth,
     private val firestore: FirebaseFirestore
 ) {
-
     suspend fun addToFavourites(
         product: Product
     ): Result<Unit> {
@@ -61,12 +60,71 @@ class FavouriteRepository(
             val favourites = snapshot.documents.mapNotNull { document ->
                 document.toObject<FavouriteItem>()
             }
-
             Result.success(favourites)
-
         } catch (e: Exception) {
-
             Result.failure(e)
         }
     }
+    suspend fun removeSelectedFavourites(
+        productIds: Set<Int>
+    ): Result<Unit> {
+
+        return try {
+
+            val currentUser = auth.currentUser
+                ?: return Result.failure(
+                    Exception("User is not authenticated")
+                )
+
+            val favouritesCollection = firestore
+                .collection("users")
+                .document(currentUser.uid)
+                .collection("favourites")
+
+            val batch = firestore.batch()
+
+            productIds.forEach { productId ->
+                val documentReference =
+                    favouritesCollection
+                        .document(productId.toString())
+                batch.delete(documentReference)
+            }
+            batch.commit().await()
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    suspend fun removeAllFavourites(): Result<Unit> {
+
+        return try {
+            val currentUser = auth.currentUser
+                ?: return Result.failure(
+                    Exception("User is not authenticated")
+                )
+
+            val favouritesCollection = firestore
+                .collection("users")
+                .document(currentUser.uid)
+                .collection("favourites")
+
+            val snapshot =
+                favouritesCollection
+                    .get()
+                    .await()
+            val batch = firestore.batch()
+            snapshot.documents.forEach { document ->
+                batch.delete(document.reference)
+            }
+            batch.commit().await()
+            Result.success(Unit)
+
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+
 }

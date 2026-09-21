@@ -83,10 +83,8 @@ fun FavouriteTopBar(
         ) {
             Text(
                 text = "Favourites",
-                fontSize = 18.sp,
+                fontSize = 16.sp,
                 fontFamily = FontFamily.SansSerif,
-                fontWeight =
-                    FontWeight.W500,
                 color =
                     Color(0xFF282B3A)
             )

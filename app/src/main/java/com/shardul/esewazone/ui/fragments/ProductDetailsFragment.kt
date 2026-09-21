@@ -8,6 +8,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.navOptions
+import androidx.savedstate.serialization.saved
 import coil.load
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.snackbar.Snackbar
@@ -47,7 +49,6 @@ class ProductDetailsFragment : Fragment() {
 
         _binding =
             FragmentProductDetailsBinding.inflate(inflater, container, false)
-
         return binding.root
 
     }
@@ -64,7 +65,6 @@ class ProductDetailsFragment : Fragment() {
             ProductDetailsViewModelFactory(repository)
         viewModel =
             ViewModelProvider(this, factory)[ProductDetailsViewModel::class.java]
-
         val cartDao =
             CartDatabase.getDatabase(requireContext()).cartDao()
         val cartRepository =
@@ -90,16 +90,16 @@ class ProductDetailsFragment : Fragment() {
             binding.imgProduct.load(product.image)
             binding.txtTitle.text = product.title
             binding.txtCategory.text = product.category
+            binding.txtPrice.text =
+                "Rs. %.2f".format(product.price)
             binding.txtBottomPrice.text =
-                "NPR %.2f".format(product.price)
-            binding.txtBottomPrice.text =
-                "NPR %.2f".format(product.price)
+                "Rs. %.2f".format(product.price)
             binding.txtDescription.text =
                 product.description
             binding.txtRating.text =
                 "${product.rating.rate} (${product.rating.count})"
             binding.btnBack.setOnClickListener {
-                findNavController().navigateUp()
+                findNavController().popBackStack()
             }
 
             binding.btnAddToCart.setOnClickListener {
@@ -109,11 +109,7 @@ class ProductDetailsFragment : Fragment() {
 
             binding.btnFavourite.setOnClickListener {
                 favouriteViewModel.addToFavourites(product)
-                   Snackbar.make(
-                    binding.root,
-                    "Added to Favourites",
-                    Snackbar.LENGTH_LONG
-                ).show()
+                showSnackbarFavourite()
             }
         }
 
@@ -127,7 +123,15 @@ class ProductDetailsFragment : Fragment() {
         )
         addToCartSnackbar?.setAction("Go to Cart"){
             val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigation)
-            bottomNav.selectedItemId = R.id.cartFragment
+            bottomNav.selectedItemId=R.id.cartFragment
+//            findNavController().navigate(R.id.action_productDetailsFragment_to_cartFragment)
+//            navOptions {
+//                popUpTo(R.id.homeFragment) {
+//                    saveState=true
+//                }
+//                launchSingleTop=true
+//                restoreState=true
+//            }
         }
         addToCartSnackbar?.setActionTextColor(
             ContextCompat.getColor(
@@ -136,6 +140,26 @@ class ProductDetailsFragment : Fragment() {
             )
         )
 
+        addToCartSnackbar?.show()
+    }
+
+    private fun showSnackbarFavourite(){
+        addToCartSnackbar?.dismiss()
+        addToCartSnackbar = Snackbar.make(
+            binding.root,
+            "Added to Favourites Successfully",
+            Snackbar.LENGTH_LONG
+        )
+        addToCartSnackbar?.setAction("Go to Favourites"){
+            val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigation)
+            bottomNav.selectedItemId=R.id.favouritesFragment
+        }
+        addToCartSnackbar?.setActionTextColor(
+            ContextCompat.getColor(
+                requireContext(),
+                R.color.priceColor
+            )
+        )
         addToCartSnackbar?.show()
     }
 

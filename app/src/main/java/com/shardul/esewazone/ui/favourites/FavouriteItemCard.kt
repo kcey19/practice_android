@@ -60,7 +60,7 @@ fun FavouriteItemCard(
             .fillMaxWidth()
             .height(104.dp)
             .clip(
-                RoundedCornerShape(16.dp)
+                RoundedCornerShape(10.dp)
             )
             .background(
                 Color.White
@@ -140,13 +140,14 @@ fun FavouriteItemCard(
                     onClick = {
                     },
                     modifier = Modifier
-                        .size(25.dp)
+                        .size(20.dp)
                         .clip(
                             RoundedCornerShape(8.dp)
                         )
                         .background(
                             Color(0xFF20B900)
                         )
+
                 ) {
                     Icon(
                         imageVector =
@@ -198,7 +199,6 @@ fun FavouriteItemCard(
 @Preview
 @Composable
 fun FavouriteItemCardPreview(
-
 ){
     FavouriteItemCard(
        item = FavouriteItem(

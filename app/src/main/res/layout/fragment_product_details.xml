@@ -38,6 +38,7 @@
             app:cardBackgroundColor="@android:color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:strokeWidth="0dp"
             app:layout_constraintBottom_toBottomOf="parent">
 
             <ImageButton
@@ -53,9 +54,6 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- ========================= -->
-    <!-- Scrollable Content -->
-    <!-- ========================= -->
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
@@ -74,18 +72,15 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Product Image -->
-
             <ImageView
                 android:id="@+id/imgProduct"
                 android:layout_width="match_parent"
+                android:background="@color/white_shade"
                 android:layout_height="200dp"
                 android:layout_marginHorizontal="28dp"
                 android:layout_marginTop="20dp"
-                android:scaleType="fitCenter"
-                tools:src="@drawable/image"/>
+                android:scaleType="fitCenter" />
 
-            <!-- Image Indicator -->
 
             <me.relex.circleindicator.CircleIndicator3
                 android:id="@+id/productIndicator"
@@ -99,26 +94,19 @@
                 app:ci_height="8dp"
                 app:ci_margin="6dp"/>
 
-            <!-- ========================= -->
-            <!-- Product Card + Favourite -->
-            <!-- ========================= -->
-
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="36dp"
-                android:layout_marginHorizontal="16dp"
                 android:layout_marginBottom="32dp">
 
-                <!-- Product Card -->
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/productCard"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="8dp"
+
                     app:strokeWidth="0dp"
                     app:cardBackgroundColor="@android:color/white">
 
@@ -134,12 +122,11 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
-                            android:fontFamily="@font/poppins_semibold"
+                            android:fontFamily="@font/source_sans_pro_semibold"
                             android:textColor="@color/textPrimary"
                             android:textSize="24sp"
-                            tools:text="Fjallraven Backpack"/>
+                            tools:text="Fjallraven Backpack" />
 
-                        <!-- Category -->
 
                         <TextView
                             android:id="@+id/txtCategory"
@@ -163,7 +150,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:fontFamily="@font/poppins_medium"
+                                android:fontFamily="@font/source_sans_pro"
                                 android:text="Availability"
                                 android:textColor="#757575"
                                 android:textSize="14sp" />
@@ -173,14 +160,12 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
-                                android:fontFamily="@font/poppins_semibold"
+                                android:fontFamily="@font/source_sans_pro"
                                 android:text="In Stock"
                                 android:textColor="@color/primaryGreen"
                                 android:textSize="14sp" />
 
                         </LinearLayout>
-
-                        <!-- Price + Rating -->
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -196,10 +181,7 @@
                                 android:textSize="30sp"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                android:text="$109.95" />
-
-
-
+                                />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <LinearLayout
@@ -236,7 +218,7 @@
                             android:layout_marginTop="22dp"
                             android:background="#EEEEEE"/>
 
-                        <!-- Description -->
+
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -262,7 +244,6 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Floating Favourite Button -->
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/btnFavourite"
@@ -288,9 +269,6 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <!-- ================================================= -->
-    <!-- Bottom Cart Bar -->
-    <!-- ================================================= -->
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottomBar"
@@ -324,7 +302,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_medium"
+                    android:fontFamily="@font/source_sans_pro"
                     android:text="Price"
                     android:textColor="#999999"
                     android:textSize="12sp" />
@@ -335,7 +313,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:fontFamily="@font/source_sans_pro_semibold"
-                    android:text="$109.95"
                     android:textColor="@color/textPrimary"
                     android:textSize="26sp" />
 

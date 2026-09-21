@@ -22,11 +22,11 @@
     <color name="forest_green">#0E4A17</color>
     <color name="social_button_bg">#FFF5D2</color>
 
-    <!-- Typography & Text Colors -->
+
     <color name="text_dark_green">#0E4A17</color>
     <color name="text_muted">#6B5C35</color>
     <color name="text_black">#000000</color>
 
-    <!-- Social Brand Colors -->
+
     <color name="facebook_blue">#1877F2</color>
 </resources>
