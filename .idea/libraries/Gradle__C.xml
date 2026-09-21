@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: C" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/9.4.1/transforms/3a02ab3a1b172b0e290673bc28aa1ca2/transformed/esewaSDK/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/9.4.1/transforms/3a02ab3a1b172b0e290673bc28aa1ca2/transformed/esewaSDK/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/9.4.1/transforms/3a02ab3a1b172b0e290673bc28aa1ca2/transformed/esewaSDK/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

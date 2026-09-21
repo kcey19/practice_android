@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\activity_sign_up.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_profile.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_product.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_cart.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_cart.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_cart.xml"
+    },
+    {
+        "merged": "com.shardul.esewazone.app-mergeDebugResources-89:/layout/item_product.xml",
+        "source": "com.shardul.esewazone.app-main-92:/layout/item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_featured_product.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_featured_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_favourites.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_favourites.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\layout_header.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_product_grid.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_product_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_product_details.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_product_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\layout_search.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_category.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\layout_delivery.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_delivery.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\bottom_sheet_delete_cart.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\bottom_sheet_delete_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\item_banner.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_banner.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_more.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_location_picker.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_location_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-mergeDebugResources-89:\\layout\\layout_banner.xml",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_banner.xml"
+    }
+]

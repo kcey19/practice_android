@@ -1,0 +1,11 @@
+com.shardul.esewazone.app-res-0 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\generated\res\injectCrashlyticsMappingFileIdDebug
+com.shardul.esewazone.app-res-1 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\generated\res\injectCrashlyticsVersionControlInfoDebug
+com.shardul.esewazone.app-pngs-2 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\generated\res\pngs\debug
+com.shardul.esewazone.app-res-3 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\generated\res\processDebugGoogleServices
+com.shardul.esewazone.app-updated_navigation_xml-4 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\generated\updated_navigation_xml\debug
+com.shardul.esewazone.app-packageDebugResources-5 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.shardul.esewazone.app-packageDebugResources-6 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.shardul.esewazone.app-debug-7 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\build\intermediates\merged_res\debug\mergeDebugResources
+com.shardul.esewazone.app-debug-8 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\src\debug\res
+com.shardul.esewazone.app-main-9 C:\Users\shardul\AndroidStudioProjects\Esewazone\app\src\main\res
+gradleHome-0 C:\Users\shardul\.gradle

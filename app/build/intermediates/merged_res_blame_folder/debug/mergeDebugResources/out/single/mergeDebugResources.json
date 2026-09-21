@@ -1,0 +1,478 @@
+[
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_source_sans_pro_semibold.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\source_sans_pro_semibold.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins_medium.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins_medium.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_arrow_back.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\arrow_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_cart.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_reward_points.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\reward_points.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_location_picker.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_location_picker.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_arrow_button.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_arrow_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_layout_search.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_add.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\add.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_laptop.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_laptop.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa_bg.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_product_grid.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_product_grid.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_indicator_unselected.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\indicator_unselected.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_payment.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_payment.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_indicator_selected.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\indicator_selected.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_cart.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_empty_favourite.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\empty_favourite.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_empty_favorite.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\empty_favorite.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa_splash_logo_transparent.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa_splash_logo_transparent.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_shop.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_cart.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins_extrabold.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins_extrabold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_featured_product.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_featured_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_google.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_google.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_category_chip.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_category_chip.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_discount.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_discount.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_banner.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\banner.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_profile.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_menu_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\menu_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\anim_scale_in.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\anim\\scale_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_notification.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_notification.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_quantity.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_quantity.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_favourite.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_favourite.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\anim_fade_in.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\anim\\fade_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_layout_banner.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_banner.xml"
+    },
+    {
+        "merged": "com.shardul.esewazone.app-debug-90:/layout_item_product.xml.flat",
+        "source": "com.shardul.esewazone.app-main-92:/layout/item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_favourite.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\favourite.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_tune_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\tune_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_source_sans_pro.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\source_sans_pro.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_e.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\e.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_product_details.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_product_details.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_my_products.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\my_products.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_grocery.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_grocery.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_category.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_category.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa_logo_02.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa_logo_02.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\color_bottom_nav_colors.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\color\\bottom_nav_colors.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_bottom_sheet_delete_cart.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\bottom_sheet_delete_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_profile_photo.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\profile_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_arrow_right_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\arrow_right_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_image.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_favourite_.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\favourite_.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_home.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_return_order.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_return_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_delete.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_promocode.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_promocode.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_circle_white.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_circle_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_source_sans_pro_light.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\source_sans_pro_light.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_location.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_location.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_activity_sign_up.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_outline_storefront_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\outline_storefront_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_search_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\search_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_more.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_profile.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa_01.jpg.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa_01.jpg"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_unnamed.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\unnamed.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_cart_button.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_cart_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_logout.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\logout.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_shippping_address.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\shippping_address.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins_bold.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins_bold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\anim_slide_up.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_source_sans_3_extralight.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\source_sans_3_extralight.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_star.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\star.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_source_sans_pro_extralight.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\source_sans_pro_extralight.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_category_circle_background.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\category_circle_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_product.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_product.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_layout_delivery.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_delivery.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_fragment_favourites.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\fragment_favourites.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins_thin.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins_thin.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_buy_button.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_buy_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_remove.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\remove.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_group.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\group.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\font_poppins_semibold.ttf.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\font\\poppins_semibold.ttf"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_esewa_logo.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\esewa_logo.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\anim_bottom_nav_animator.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\anim\\bottom_nav_animator.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_hot_deals.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\hot_deals.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_cart_badge_background.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\cart_badge_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_item_banner.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\item_banner.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_brand.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_brand.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_cart_stepper_button.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_cart_stepper_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_metric.png.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\metric.png"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_mobile.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_mobile.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_cancel_order.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\cancel_order.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\layout_layout_header.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\layout\\layout_header.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_ic_fashion.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\ic_fashion.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_bg_login_gradient.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\bg_login_gradient.xml"
+    },
+    {
+        "merged": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-debug-90:\\drawable_location_24.xml.flat",
+        "source": "C:\\Users\\shardul\\.gradle\\daemon\\9.4.1\\com.shardul.esewazone.app-main-92:\\drawable\\location_24.xml"
+    }
+]

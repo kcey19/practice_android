@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.android.libraries.places:places:5.3.0@aar" external-system-id="GRADLE">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/9.4.1/transforms/55eadfb934acca59dec35cf500b05516/transformed/places-5.3.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/9.4.1/transforms/55eadfb934acca59dec35cf500b05516/transformed/places-5.3.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/9.4.1/transforms/55eadfb934acca59dec35cf500b05516/transformed/places-5.3.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.android.libraries.places/places/5.3.0/5b8b06b79ce98e5294e1b75ba51a14b1cfd2145f/places-5.3.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES />
+  </library>
+</component>

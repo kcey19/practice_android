@@ -1,0 +1,6 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/cart_graph"
+app:startDestination="@id/cartFragment" >
+</navigation>

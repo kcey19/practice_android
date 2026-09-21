@@ -1,0 +1,89 @@
+<navigation
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/main_nav_graph"
+app:startDestination="@id/homeFragment" >
+<fragment
+    android:id="@+id/homeFragment"
+    android:name="com.shardul.esewazone.ui.fragments.HomeFragment"
+    android:label="Shop" >
+
+    <action
+        android:id="@+id/action_homeFragment_to_productDetailsFragment"
+        app:destination="@id/productDetailsFragment" />
+    <action
+        android:id="@+id/action_homeFragment_to_cartFragment"
+        app:destination="@id/cartFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/productDetailsFragment"
+    android:name="com.shardul.esewazone.ui.fragments.ProductDetailsFragment"
+    android:label="Product Details" >
+
+    <argument
+        android:name="productId"
+        app:argType="integer" />
+
+    <action
+        android:id="@+id/action_productDetailsFragment_to_cartFragment"
+        app:destination="@+id/cartFragment" />
+    <action
+        android:id="@+id/action_productDetailsFragment_to_favouritesFragment"
+        app:destination="@+id/favouritesFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/cartFragment"
+    android:name="com.shardul.esewazone.ui.fragments.CartFragment"
+    android:label="Cart" >
+
+    <action
+        android:id="@+id/action_cartFragment_to_checkoutFragment"
+        app:destination="@id/checkoutFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/checkoutFragment"
+    android:name="com.shardul.esewazone.checkout.CheckoutFragment"
+    android:label="Checkout" >
+
+    <action
+        android:id="@+id/action_checkoutFragment_to_locationPickerFragment"
+        app:destination="@id/locationPickerFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/cartHideFragment"
+    android:name="com.shardul.esewazone.ui.fragments.CartFragment"
+    tools:layout="@layout/fragment_cart" />
+<fragment
+    android:id="@+id/favouritesFragment"
+    android:name="com.shardul.esewazone.ui.fragments.FavouritesFragment"
+    android:label="Favourites" />
+<fragment
+    android:id="@+id/moreFragment"
+    android:name="com.shardul.esewazone.ui.fragments.MoreFragment"
+    android:label="Profile" >
+
+    <action
+        android:id="@+id/action_moreFragment_to_shippingAddressFragment"
+        app:destination="@id/shippingAddressFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/shippingAddressFragment"
+    android:name="com.shardul.esewazone.shipping.ShippingAddressFragment"
+    android:label="Shipping Address" >
+
+    <action
+        android:id="@+id/action_shippingAddressFragment_to_locationPickerFragment"
+        app:destination="@id/locationPickerFragment" />
+
+</fragment>
+<fragment
+    android:id="@+id/locationPickerFragment"
+    android:name="com.shardul.esewazone.ui.location.LocationPickerFragment"
+    android:label="Select Location" />
+</navigation>

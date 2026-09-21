@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.shardul.esewazone.app-mergeDebugResources-88:/values-ldltr-v21/values-ldltr-v21.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\shardul\\.gradle\\caches\\9.4.1\\transforms\\e4f28939901933054698698a90e94f1a\\transformed\\appcompat-1.7.1\\res\\values-ldltr-v21\\values-ldltr-v21.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "112",
+                        "endOffsets": "163"
+                    }
+                }
+            ]
+        }
+    ]
+}
