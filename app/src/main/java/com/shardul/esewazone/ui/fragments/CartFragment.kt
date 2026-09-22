@@ -31,7 +31,6 @@ import com.shardul.esewazone.viewmodel.CartViewModelFactory
 import kotlinx.coroutines.launch
 
 class CartFragment : Fragment(), CartAdapter.CartItemListener {
-
     private var _binding: FragmentCartBinding? = null
     private val binding get() = _binding!!
     private lateinit var viewModel: CartViewModel
@@ -100,7 +99,6 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
     }
 
     private fun setupViewModel() {
-
         val database =
             CartDatabase.getDatabase(requireContext())
         val repository =

@@ -1,16 +1,12 @@
 package com.shardul.esewazone.ui.activities
 
-
 import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
-import android.view.View
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.UserProfileChangeRequest
-import com.google.firebase.crashlytics.internal.common.Utils
 import com.shardul.esewazone.databinding.ActivitySignUpBinding
 
 class SignUpActivity : AppCompatActivity() {
@@ -41,6 +37,9 @@ class SignUpActivity : AppCompatActivity() {
                 registerUser(username, email, password)
             }
         }
+        binding.tvLogin.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
+        }
     }
 
     private fun validateForm(username: String, email: String, password: String): Boolean {
@@ -55,19 +54,22 @@ class SignUpActivity : AppCompatActivity() {
             isValid = false
         }
 
+
+        val emailRegex = "^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$".toRegex()
         if (email.isEmpty()) {
             binding.tilEmail.error = "Email is required"
             isValid = false
-        } else if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            binding.tilEmail.error = "Please enter a valid email address"
+        } else if (!email.matches(emailRegex)) {
+            binding.tilEmail.error = "Please enter a valid email address (e.g., name@gmail.com)"
             isValid = false
         }
 
+        val passwordRegex = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=!_\\-]).{8,}$".toRegex()
         if (password.isEmpty()) {
             binding.tilPassword.error = "Password is required"
             isValid = false
-        } else if (password.length < 6) {
-            binding.tilPassword.error = "Password must be at least 6 characters"
+        } else if (!password.matches(passwordRegex)) {
+            binding.tilPassword.error = "Must be 8+ chars with uppercase, lowercase, number & symbol"
             isValid = false
         }
 
@@ -91,17 +93,16 @@ class SignUpActivity : AppCompatActivity() {
                             setLoadingState(false)
 
                             if (profileTask.isSuccessful) {
-                                Toast.makeText(this,"Account created successfully! Please log in",Toast.LENGTH_LONG).show()
-//                                Utils.showToast(this, "Account created successfully! Please log in.")
+                                Toast.makeText(this, "Account created successfully! Please log in", Toast.LENGTH_LONG).show()
                                 finish()
                             } else {
-                                Toast.makeText(this,"Failed to create user account",Toast.LENGTH_LONG).show()
+                                Toast.makeText(this, "Failed to create user profile", Toast.LENGTH_LONG).show()
                             }
                         }
                 } else {
                     setLoadingState(false)
                     val error = task.exception?.localizedMessage ?: "Registration failed"
-                    Toast.makeText(this,error,Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, error, Toast.LENGTH_LONG).show()
                 }
             }
     }
