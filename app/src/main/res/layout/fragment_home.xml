@@ -27,9 +27,9 @@
             android:id="@+id/searchLayout"
             layout="@layout/layout_search" />
 
-        <include
-            android:id="@+id/deliveryLayout"
-            layout="@layout/layout_delivery" />
+<!--        <include-->
+<!--            android:id="@+id/deliveryLayout"-->
+<!--            layout="@layout/layout_delivery" />-->
 
         <include
             android:id="@+id/bannerLayout"

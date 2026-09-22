@@ -266,7 +266,122 @@
                 </com.google.android.material.card.MaterialCardView>
 
             </FrameLayout>
+
+            <!-- RATINGS & REVIEWS SECTION -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="24dp"
+                android:paddingBottom="32dp">
+
+                <!-- Rating Summary Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_rounded_card"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtAverageRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.0"
+                            android:textSize="36sp"
+                            android:fontFamily="@font/source_sans_pro_semibold"
+                            android:textColor="@color/textPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/5"
+                            android:textSize="14sp"
+                            android:textColor="#8E8E93" />
+
+                        <TextView
+                            android:id="@+id/txtTotalReviewsCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="No reviews yet"
+                            android:textSize="12sp"
+                            android:textColor="#8E8E93" />
+                    </LinearLayout>
+
+                    <!-- Corresponding Average Rating Stars -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <RatingBar
+                            android:id="@+id/ratingBarSummary"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:numStars="5"
+                            android:stepSize="0.1"
+                            android:isIndicator="true"
+                            android:progressTint="#FFB800"
+                            android:progressBackgroundTint="#D1D1D6"
+                            android:secondaryProgressTint="#FFB800" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Header for Review List & Write Button -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="24dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txtReviewsHeading"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Reviews (0)"
+                        android:fontFamily="@font/source_sans_pro_semibold"
+                        android:textSize="16sp"
+                        android:textColor="@color/textPrimary" />
+
+                    <TextView
+                        android:id="@+id/btnWriteReview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="WRITE REVIEW +"
+                        android:fontFamily="@font/poppins_medium"
+                        android:textSize="13sp"
+                        android:textColor="@color/primaryGreen"
+                        android:clickable="true"
+                        android:focusable="true" />
+                </LinearLayout>
+
+                <!-- RecyclerView for Dynamic Reviews -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:itemCount="2"
+                    tools:listitem="@layout/item_review" />
+
+            </LinearLayout>
+
         </LinearLayout>
+
+
     </androidx.core.widget.NestedScrollView>
 
 

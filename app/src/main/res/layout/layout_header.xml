@@ -46,15 +46,16 @@
     </LinearLayout>
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cardNotification"
-        android:layout_width="42dp"
-        android:layout_height="42dp"
-        app:cardCornerRadius="21dp"
-        app:cardElevation="2dp"
-        app:cardBackgroundColor="@android:color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+<!--    <com.google.android.material.card.MaterialCardView-->
+<!--        android:id="@+id/cardNotification"-->
+<!--        android:layout_width="42dp"-->
+<!--        android:layout_height="42dp"-->
+<!--        app:cardCornerRadius="21dp"-->
+<!--        app:cardElevation="2dp"-->
+<!--        app:strokeWidth="0dp"-->
+<!--        app:cardBackgroundColor="@color/background"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
 
         <ImageView
             android:id="@+id/imgNotification"
@@ -62,10 +63,13 @@
             android:layout_height="24dp"
             android:layout_gravity="center"
             android:contentDescription="Notifications"
-            android:src="@drawable/ic_notification"
-            app:tint="@color/textPrimary"/>
+            android:src="@drawable/outline_notifications_24"
+            app:tint="@color/textPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
-    </com.google.android.material.card.MaterialCardView>
+<!--    </com.google.android.material.card.MaterialCardView>-->
 
 
     <TextView
@@ -87,7 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:fontFamily="@font/poppins_semibold"
-        android:text="Shardul 👋"
+        android:text="Shardul"
         android:textColor="@color/textPrimary"
         android:textSize="13sp"
         app:layout_constraintBaseline_toBaselineOf="@id/txtGreeting"
@@ -106,6 +110,6 @@
         android:textSize="11sp"
         app:layout_constraintTop_toBottomOf="@id/txtGreeting"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/cardNotification"/>
+        app:layout_constraintEnd_toStartOf="@id/imgNotification"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
