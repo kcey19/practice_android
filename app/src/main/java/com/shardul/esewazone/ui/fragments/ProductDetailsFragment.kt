@@ -10,12 +10,16 @@ import android.widget.RatingBar
 import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.example.esewazone.adapters.ReviewAdapter
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.shardul.esewazone.adapters.ProductAdapter
+import com.shardul.esewazone.adapters.ProductDisplayMode
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -23,7 +27,7 @@ import com.shardul.esewazone.R
 import com.shardul.esewazone.api.RetrofitInstance
 import com.shardul.esewazone.data.model.ReviewModel
 import com.shardul.esewazone.databinding.FragmentProductDetailsBinding
-import com.shardul.esewazone.data.repository.ProductRepository
+import com.shardul.esewazone.repository.ProductRepository
 import com.shardul.esewazone.database.CartDatabase
 import com.shardul.esewazone.repository.CartRepository
 import com.shardul.esewazone.repository.FavouriteRepository
@@ -33,6 +37,8 @@ import com.shardul.esewazone.viewmodel.FavouriteViewModel
 import com.shardul.esewazone.viewmodel.FavouriteViewModelFactory
 import com.shardul.esewazone.viewmodel.ProductDetailsViewModel
 import com.shardul.esewazone.viewmodel.ProductDetailsViewModelFactory
+import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.launch
 
 class ProductDetailsFragment : Fragment() {
 
@@ -42,6 +48,7 @@ class ProductDetailsFragment : Fragment() {
     private lateinit var cartViewModel: CartViewModel
     private lateinit var favouriteViewModel: FavouriteViewModel
     private lateinit var reviewAdapter: ReviewAdapter
+    private lateinit var similarAdapter: ProductAdapter
     private var addToCartSnackbar: Snackbar? = null
 
     override fun onCreateView(
@@ -73,7 +80,9 @@ class ProductDetailsFragment : Fragment() {
 
         viewModel.fetchProduct(productId)
         observeProduct()
+        observeReviewDeletion() // Observe deletion status via MVVM
         setupReviewsRecyclerView(productId.toString())
+        setupSimilarProducts(productId)
     }
 
     private fun observeProduct() {
@@ -84,6 +93,8 @@ class ProductDetailsFragment : Fragment() {
             binding.txtPrice.text = "Rs. %.2f".format(product.price)
             binding.txtBottomPrice.text = "Rs. %.2f".format(product.price)
             binding.txtDescription.text = product.description
+
+            loadSimilarProducts(product.category, product.id)
 
             binding.btnBack.setOnClickListener {
                 findNavController().popBackStack()
@@ -101,6 +112,74 @@ class ProductDetailsFragment : Fragment() {
         }
     }
 
+    private fun observeReviewDeletion() {
+        viewModel.reviewDeleteResult.observe(viewLifecycleOwner) { result ->
+            if (!isAdded) return@observe
+            result.onSuccess {
+                Toast.makeText(requireContext(), "Review deleted successfully", Toast.LENGTH_SHORT).show()
+            }.onFailure { exception ->
+                Toast.makeText(requireContext(), "Failed to delete review: ${exception.localizedMessage}", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+
+    private fun loadSimilarProducts(category: String, currentProductId: Int) {
+        viewLifecycleOwner.lifecycleScope.launch {
+            try {
+                val repository = ProductRepository(RetrofitInstance.api)
+                val products = repository.getProductsByCategory(category)
+                val filteredList = products.filter { it.id != currentProductId }
+                similarAdapter.submitList(filteredList)
+            } catch (e: Exception) {
+                // Handle network error gracefully
+            }
+        }
+    }
+
+    private fun setupSimilarProducts(currentProductId: Int) {
+        similarAdapter = ProductAdapter(
+            displayMode = ProductDisplayMode.POPULAR,
+            onProductClick = { product ->
+                val bundle = Bundle().apply { putInt("productId", product.id) }
+                findNavController().navigate(R.id.productDetailsFragment, bundle)
+            },
+            onAddToCart = { product ->
+                cartViewModel.addToCart(product)
+                showSnackbarCart()
+            },
+            onIncreaseQuantity = { product ->
+                cartViewModel.increaseQuantity(product)
+            },
+            onDecreaseQuantity = { product ->
+                cartViewModel.decreaseQuantity(product)
+            },
+            onFavouriteClick = { product ->
+                favouriteViewModel.addToFavourites(product)
+                showSnackbarFavourite()
+            }
+        )
+
+        binding.rvSimilarProducts.apply {
+            layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
+            adapter = similarAdapter
+        }
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                cartViewModel.cartItems.collectLatest { cartItems ->
+                    val quantityMap = cartItems.associate { it.productId to it.quantity }
+                    similarAdapter.submitCartQuantities(quantityMap)
+                }
+            }
+        }
+
+        binding.btnShopNow.setOnClickListener {
+            viewModel.product.value?.let { product ->
+                loadSimilarProducts(product.category, product.id)
+            }
+        }
+    }
+
     private fun showSnackbarCart() {
         addToCartSnackbar?.dismiss()
         addToCartSnackbar = Snackbar.make(
@@ -109,8 +188,11 @@ class ProductDetailsFragment : Fragment() {
             Snackbar.LENGTH_LONG
         )
         addToCartSnackbar?.setAction("Go to Cart") {
-            val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigation)
-            bottomNav.selectedItemId = R.id.cartFragment
+            try {
+                findNavController().navigate(R.id.cartFragment)
+            } catch (e: Exception) {
+                findNavController().navigate(R.id.action_productDetailsFragment_to_cartFragment)
+            }
         }
         addToCartSnackbar?.setActionTextColor(
             ContextCompat.getColor(requireContext(), R.color.priceColor)
@@ -126,8 +208,11 @@ class ProductDetailsFragment : Fragment() {
             Snackbar.LENGTH_LONG
         )
         addToCartSnackbar?.setAction("Go to Favourites") {
-            val bottomNav = requireActivity().findViewById<BottomNavigationView>(R.id.bottomNavigation)
-            bottomNav.selectedItemId = R.id.favouritesFragment
+            try {
+                findNavController().navigate(R.id.favouritesFragment)
+            } catch (e: Exception) {
+
+            }
         }
         addToCartSnackbar?.setActionTextColor(
             ContextCompat.getColor(requireContext(), R.color.priceColor)
@@ -136,13 +221,22 @@ class ProductDetailsFragment : Fragment() {
     }
 
     private fun setupReviewsRecyclerView(productId: String) {
-        reviewAdapter = ReviewAdapter(emptyList())
+        val currentUserId = FirebaseAuth.getInstance().currentUser?.uid
+
+        reviewAdapter = ReviewAdapter(emptyList(), currentUserId) { reviewModel ->
+            viewModel.deleteReview(productId, reviewModel.reviewId)
+        }
+
         binding.rvReviews.apply {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = reviewAdapter
         }
 
         binding.btnWriteReview.setOnClickListener {
+            showWriteReviewDialog(productId)
+        }
+
+        binding.btnAddReviewEmpty.setOnClickListener {
             showWriteReviewDialog(productId)
         }
 
@@ -167,14 +261,20 @@ class ProductDetailsFragment : Fragment() {
                 binding.txtReviewsHeading.text = "Reviews (${reviewList.size})"
 
                 if (reviewList.isNotEmpty()) {
+                    binding.rvReviews.visibility = View.VISIBLE
+                    binding.layoutNoReviews.visibility = View.GONE
+
                     val average = totalRatingScore / reviewList.size
                     binding.txtAverageRating.text = "%.1f".format(average)
                     binding.txtTotalReviewsCount.text = "Based on ${reviewList.size} reviews"
-                    binding.ratingBarSummary.rating = average // Lights up corresponding summary stars
+                    binding.ratingBarSummary.rating = average
                 } else {
+                    binding.rvReviews.visibility = View.GONE
+                    binding.layoutNoReviews.visibility = View.VISIBLE
+
                     binding.txtAverageRating.text = "0.0"
-                    binding.txtTotalReviewsCount.text = "No reviews yet"
-                    binding.ratingBarSummary.rating = 0f // Resets summary stars to empty
+                    binding.txtTotalReviewsCount.text = "Based on 0 reviews"
+                    binding.ratingBarSummary.rating = 0f
                 }
             }
     }
