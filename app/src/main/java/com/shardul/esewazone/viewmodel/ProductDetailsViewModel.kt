@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.shardul.esewazone.data.model.Product
-import com.shardul.esewazone.data.repository.ProductRepository
+import com.shardul.esewazone.repository.ProductRepository
 import kotlinx.coroutines.launch
 
 class ProductDetailsViewModel(
@@ -17,6 +17,11 @@ class ProductDetailsViewModel(
     val loading: LiveData<Boolean> = _loading
     private val _error = MutableLiveData<String>()
     val error: LiveData<String> = _error
+
+    private val _reviewDeleteResult = MutableLiveData<Result<Unit>>()
+    val reviewDeleteResult: LiveData<Result<Unit>> get() = _reviewDeleteResult
+
+
 
     fun fetchProduct(id: Int) {
         viewModelScope.launch {
@@ -31,4 +36,17 @@ class ProductDetailsViewModel(
             }
         }
     }
+
+    fun deleteReview(productId: String, reviewId: String) {
+        viewModelScope.launch {
+            repository.deleteReview(productId, reviewId) { success, errorMessage ->
+                if (success) {
+                    _reviewDeleteResult.value = Result.success(Unit)
+                } else {
+                    _reviewDeleteResult.value = Result.failure(Exception(errorMessage ?: "Unknown error occurred"))
+                }
+            }
+        }
+    }
+
 }

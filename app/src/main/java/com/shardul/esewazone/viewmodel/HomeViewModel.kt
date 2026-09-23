@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.shardul.esewazone.api.RetrofitInstance
 import com.shardul.esewazone.data.model.Product
-import com.shardul.esewazone.data.repository.ProductRepository
 import com.shardul.esewazone.database.CartEntity
 import com.shardul.esewazone.repository.CartRepository
 import com.shardul.esewazone.repository.FavouriteRepository
+import com.shardul.esewazone.repository.ProductRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow

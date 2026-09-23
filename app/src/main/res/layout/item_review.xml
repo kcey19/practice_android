@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:paddingVertical="12dp">
 
@@ -53,6 +54,19 @@
             android:textSize="11sp"
             android:textColor="#8E8E93"
             tools:text="1 MONTH AGO" />
+
+        <!-- Added Delete Button Icon -->
+        <ImageButton
+            android:id="@+id/btnDeleteReview"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/delete"
+            android:contentDescription="Delete review"
+            android:visibility="gone"
+            app:tint="#8E8E93" />
+
     </LinearLayout>
 
     <TextView

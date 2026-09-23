@@ -3,7 +3,7 @@ package com.shardul.esewazone.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.shardul.esewazone.data.repository.ProductRepository
+import com.shardul.esewazone.repository.ProductRepository
 
 class ProductDetailsViewModelFactory(
     private val repository: ProductRepository

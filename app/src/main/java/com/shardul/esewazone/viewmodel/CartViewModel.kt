@@ -30,9 +30,30 @@ class CartViewModel(
             repository.increaseQuantity(item)
         }
     }
+    fun increaseQuantity(product: Product){
+        viewModelScope.launch{
+            val currentCart = cartItems.value
+            val item = currentCart.find { it.productId == product.id }
+            if (item != null) {
+                repository.increaseQuantity(item)
+            }else{
+                repository.addToCart(product)
+            }
+        }
+    }
      fun decreaseQuantity(item: CartEntity){
         viewModelScope.launch {
             repository.decreaseQuantity(item)
+        }
+    }
+
+    fun decreaseQuantity(product: Product) {
+        viewModelScope.launch {
+            val currentCart = cartItems.value
+            val item = currentCart.find { it.productId == product.id }
+            if (item != null) {
+                repository.decreaseQuantity(item)
+            }
         }
     }
      fun removeItem(item: CartEntity){
