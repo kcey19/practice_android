@@ -17,7 +17,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
-import com.example.esewazone.adapters.ReviewAdapter
+import com.shardul.esewazone.adapters.ReviewAdapter
 import com.shardul.esewazone.adapters.ProductAdapter
 import com.shardul.esewazone.adapters.ProductDisplayMode
 import com.google.android.material.snackbar.Snackbar
@@ -80,7 +80,7 @@ class ProductDetailsFragment : Fragment() {
 
         viewModel.fetchProduct(productId)
         observeProduct()
-        observeReviewDeletion() // Observe deletion status via MVVM
+        observeReviewDeletion()
         setupReviewsRecyclerView(productId.toString())
         setupSimilarProducts(productId)
     }
@@ -131,7 +131,6 @@ class ProductDetailsFragment : Fragment() {
                 val filteredList = products.filter { it.id != currentProductId }
                 similarAdapter.submitList(filteredList)
             } catch (e: Exception) {
-                // Handle network error gracefully
             }
         }
     }

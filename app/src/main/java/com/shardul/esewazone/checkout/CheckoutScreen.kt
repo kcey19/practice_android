@@ -108,7 +108,7 @@ fun CheckoutScreen(
     var showPromoSheet by rememberSaveable {
         mutableStateOf(false)
     }
-    var showAddressSheet by rememberSaveable{
+    var showAddressSheet by rememberSaveable {
         mutableStateOf(false)
     }
 
@@ -184,12 +184,11 @@ fun CheckoutScreen(
 
         bottomBar = {
             CheckoutBottomBar(
-                state=state,
+                state = state,
                 onPlaceOrder = {
-                    if(state.shippingAddress==null){
-                        showAddressSheet=true
-                    }
-                    else{
+                    if (state.shippingAddress == null) {
+                        showAddressSheet = true
+                    } else {
                         onPlaceOrder()
                     }
                 }
@@ -241,7 +240,7 @@ fun CheckoutScreen(
                     onClick = {
                         showPromoSheet = true
                     },
-                    onRemoveClick=onRemovePromoCode
+                    onRemoveClick = onRemovePromoCode
                 )
             }
             item {
@@ -255,18 +254,20 @@ fun CheckoutScreen(
             }
             item {
                 PaymentMethodCard(
-                    selectedMethod =
-                        state.selectedPaymentMethod,
+                    selectedMethod = state.selectedPaymentMethod,
+                    onPaymentMethodSelected = { method ->
 
-                    onPaymentMethodSelected = {method ->
-                        onPaymentMethodSelected(method)
-
-                        val paymentOptionName = if(method == PaymentMethod.CASH_ON_DELIVERY){
-                            "Cash on Delivery"
-                        } else{
-                            "Pay with eSewa"
+                        if (state.shippingAddress == null) {
+                            showAddressSheet = true
+                        } else {
+                            onPaymentMethodSelected(method)
+                            val paymentOptionName = if (method == PaymentMethod.CASH_ON_DELIVERY) {
+                                "Cash on Delivery"
+                            } else {
+                                "Pay with eSewa"
+                            }
+                            proceedToConfirmation(paymentOptionName)
                         }
-                    proceedToConfirmation(paymentOptionName)
                     }
                 )
             }
@@ -282,20 +283,20 @@ fun CheckoutScreen(
             onDismiss = {
                 showPromoSheet = false
             },
-            onApply = {code ->
+            onApply = { code ->
                 onPromoCodeClick(code)
                 showPromoSheet = false
             }
         )
     }
-    if(showAddressSheet){
+    if (showAddressSheet) {
         AddressRequiredSheet(
-            onSetAddress= {
-                showAddressSheet=false
+            onSetAddress = {
+                showAddressSheet = false
                 onAddressClick()
             },
             onDismiss = {
-                showAddressSheet=false
+                showAddressSheet = false
             }
         )
     }
@@ -456,7 +457,8 @@ private fun CheckoutProductCard(
     item: CheckoutCartItem
 ) {
     Card(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier
+            .fillMaxWidth()
             .height(105.dp),
         shape = RoundedCornerShape(10.dp),
         colors = CardDefaults.cardColors(
@@ -480,8 +482,7 @@ private fun CheckoutProductCard(
                     .clip(
                         RoundedCornerShape(8.dp)
                     )
-                    .background(Color(0xFFB6B2A5))
-                ,
+                    .background(Color(0xFFB6B2A5)),
                 contentScale =
                     ContentScale.Fit
             )
@@ -525,6 +526,7 @@ private fun CheckoutProductCard(
         }
     }
 }
+
 @Composable
 private fun PromoCodeButton(
     appliedCode: String,
@@ -629,7 +631,7 @@ private fun PaymentMethodCard(
 @Composable
 private fun PaymentRow(
     title: String,
-    iconId:Int,
+    iconId: Int,
     selected: Boolean,
     onClick: () -> Unit
 ) {
@@ -848,6 +850,7 @@ private fun CostRow(
         )
     }
 }
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun PromoCodeSheet(
@@ -912,7 +915,7 @@ private fun PromoCodeSheet(
                     modifier =
                         Modifier.weight(1f),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFF555770 )
+                        containerColor = Color(0xFF555770)
                     )
                 ) {
                     Text(
@@ -926,12 +929,12 @@ private fun PromoCodeSheet(
                     modifier =
                         Modifier.weight(1f),
                     colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFF2ABB00 )
+                        containerColor = Color(0xFF2ABB00)
                     )
                 ) {
-                    Text("APPLY",
-                        modifier = Modifier.
-                        background(Color(0xFF2ABB00))
+                    Text(
+                        "APPLY",
+                        modifier = Modifier.background(Color(0xFF2ABB00))
                     )
                 }
             }

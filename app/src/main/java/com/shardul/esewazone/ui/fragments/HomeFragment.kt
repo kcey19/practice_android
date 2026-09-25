@@ -67,6 +67,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         setupChipGroupListeners()
         observeProducts()
         observeCart()
+        setUpSearch()
 
         if (scrollYPosition != 0) {
             binding.scrollView.post {
@@ -285,6 +286,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             this,
             factory
         )[HomeViewModel::class.java]
+    }
+
+    private fun setUpSearch(){
+        binding.searchLayout.cardSearch.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_searchFragment)
+        }
     }
 
     override fun onDestroyView() {

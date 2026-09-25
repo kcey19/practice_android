@@ -1,4 +1,4 @@
-package com.example.esewazone.adapters
+package com.shardul.esewazone.adapters
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +7,7 @@ import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
 import com.bumptech.glide.Glide
 import com.shardul.esewazone.R
 import com.shardul.esewazone.data.model.ReviewModel
@@ -21,10 +22,12 @@ class ReviewAdapter(
 ) : RecyclerView.Adapter<ReviewAdapter.ReviewViewHolder>() {
 
     class ReviewViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
+        val imgUser: CircleImageView = itemView.findViewById(R.id.imgUser)
         val txtUserName: TextView = itemView.findViewById(R.id.txtUserName)
         val txtComment: TextView = itemView.findViewById(R.id.txtComment)
         val ratingBar: RatingBar = itemView.findViewById(R.id.ratingBarItem)
-        val btnDelete: ImageButton = itemView.findViewById(R.id.btnDeleteReview) // Assuming you have an ImageButton for delete
+        val btnDelete: ImageButton = itemView.findViewById(R.id.btnDeleteReview)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewViewHolder {
@@ -38,7 +41,17 @@ class ReviewAdapter(
         holder.txtComment.text = review.comment
         holder.ratingBar.rating = review.rating
 
-        // Only show delete button if the review belongs to the currently logged-in user
+        if (!review.userImage.isNullOrEmpty()) {
+            holder.imgUser.load(review.userImage) {
+                crossfade(true)
+                placeholder(R.drawable.ic_profile_placeholder)
+                error(R.drawable.ic_profile_placeholder)
+            }
+        } else {
+            holder.imgUser.setImageResource(R.drawable.ic_profile_placeholder)
+        }
+
+
         if (!currentUserId.isNullOrEmpty() && review.userId == currentUserId) {
             holder.btnDelete.visibility = View.VISIBLE
             holder.btnDelete.setOnClickListener {

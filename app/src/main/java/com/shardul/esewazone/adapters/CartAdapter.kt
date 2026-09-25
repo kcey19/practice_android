@@ -54,23 +54,22 @@ class CartAdapter(
         holder.binding.btnDecrease.setOnClickListener {
             listener.onDecrease(item)
         }
-
+        holder.itemView.setOnClickListener {
+            listener.onItemClick(item)
+        }
     }
 
     fun updateCart(newItems: List<CartEntity>) {
-
         cartItems = newItems
-
         notifyDataSetChanged()
 
     }
 
     interface CartItemListener {
-
         fun onDelete(item: CartEntity)
         fun onIncrease(item: CartEntity)
         fun onDecrease(item: CartEntity)
-
+        fun onItemClick(item: CartEntity)
     }
 
 }

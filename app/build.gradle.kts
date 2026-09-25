@@ -1,12 +1,12 @@
 
 import java.util.Properties
-val secretsProperties=Properties().apply {
-    val secretsPropertiesFile=rootProject.file("secrets.properties")
-    if(secretsPropertiesFile.exists()){
-        load(secretsPropertiesFile.inputStream())
+val localProperties=Properties().apply {
+    val file=rootProject.file("local.properties")
+    if(file.exists()){
+        load(file.inputStream())
     }
 }
-val mapsApiKey:String = secretsProperties.getProperty("MAPS_API_KEY") ?: ""
+val mapsApiKey:String = localProperties.getProperty("MAPS_API_KEY") ?: ""
 
 plugins {
     alias(libs.plugins.android.application)
@@ -78,6 +78,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.lifecycle.viewmodel)
     implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.runtime)
     implementation(libs.androidx.ui.text)
     implementation(libs.material)
     implementation(libs.androidx.core.splashscreen)

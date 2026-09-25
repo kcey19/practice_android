@@ -76,6 +76,9 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
             }
 
         }
+        binding.btnContinueShopping.setOnClickListener{
+            findNavController().popBackStack()
+        }
 
         super.onViewCreated(view, savedInstanceState)
         setupViewModel()
@@ -136,6 +139,16 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
                 viewModel.cartItems.collect { cartItems ->
                     cartAdapter.updateCart(cartItems)
                     updateTotal(cartItems)
+
+                    if (cartItems.isNotEmpty()) {
+                        binding.recyclerCart.visibility = View.VISIBLE
+                        binding.layoutEmptyCart.visibility = View.GONE
+                        binding.btnCheckout.isEnabled = true
+                    } else {
+                        binding.recyclerCart.visibility = View.GONE
+                        binding.layoutEmptyCart.visibility = View.VISIBLE
+                        binding.btnCheckout.isEnabled = false
+                    }
                 }
             }
         }
@@ -168,6 +181,13 @@ class CartFragment : Fragment(), CartAdapter.CartItemListener {
 
     override fun onDelete(item: CartEntity) {
         viewModel.removeItem(item)
+    }
+
+    override fun onItemClick(item: CartEntity) {
+        val bundle = Bundle().apply {
+            putInt("productId", item.productId)
+        }
+        findNavController().navigate(R.id.productDetailsFragment,bundle)
     }
 
     override fun onDestroyView() {
